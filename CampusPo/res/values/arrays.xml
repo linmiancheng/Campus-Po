@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tab_title">
+        <item>@string/tab_home_page</item>
+        <item>@string/tab_special_page</item>
+        <item>@string/tab_personal_page</item>
+    </string-array>
+    
+</resources>

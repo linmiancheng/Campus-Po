@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="default"  extends="json-default" >  
+
+	<!-- user action -->
+	<action name="muserlogin" class="com.campuspo.action.userAction" method="MUserLogin">  
+        <!-- <param name="email">{1}</param>  
+	    <param name="password">{2}</param>   -->
+        <result name="success" type="json"> 
+	       <param name="includeProperties">  
+	                 code,data.*
+	       </param> 
+        </result>  
+        <result name="none" type="json">
+	        <param name="includeProperties">
+	        	code
+        	</param>
+        </result>
+    </action> 
+    <action name="userlogin" class="com.campuspo.action.userAction" method="userLogin">  
+        <!-- <param name="email">{1}</param>  
+	    <param name="password">{2}</param>   -->
+        <result name="success" type="json"> 
+	       <param name="includeProperties">  
+	                 code,data.*
+	       </param> 
+        </result>  
+        <result name="none" type="json">
+	        <param name="includeProperties">
+	        	code
+        	</param>
+        </result>
+    </action>  
+    <action name="getUserInfo" class="com.campuspo.action.userAction" method="getUserInfo">  
+        <result name="success" type="json"> 
+	       <param name="includeProperties">  
+	                 code,data.*
+	       </param> 
+        </result>  
+        <result name="none" type="json">
+	        <param name="includeProperties">
+	        	code
+        	</param>
+        </result>
+    </action>  
+    
+     <action name="getFocusTimeLine" class="com.campuspo.action.userAction" method="getFocusTimeLine">  
+        <result name="success" type="json"> 
+	       <param name="includeProperties">  
+	                 code,data.*
+	       </param> 
+        </result>  
+        <result name="none" type="json">
+	        <param name="includeProperties">
+	        	code
+        	</param>
+        </result>
+    </action>  
+    <action name="getMySponsorPosters" class="com.campuspo.action.userAction" method="getMySponsorPosters">  
+        <result name="success" type="json"> 
+	       <param name="includeProperties">  
+	                 code,data.*
+	       </param> 
+        </result>  
+        <result name="none" type="json">
+	        <param name="includeProperties">
+	        	code
+        	</param>
+        </result>
+    </action>  
+    
+    
+    <!-- poster action -->
+	<action name="getPosters" class="com.campuspo.action.GetPostersAction"  method="getPosterList">
+		<result name="success" type="json">
+			<param name="includeProperties">
+				code,data.*
+			</param>
+		</result>
+		<result name="none" type="json">
+			<param name="includeProperties">
+	        	code
+        	</param>
+		</result>
+	</action>
+	
+	
+	<action name="getPoster" class="com.campuspo.action.GetPostersAction"  method="getPoster">
+		<result name="success" type="json">
+			<param name="includeProperties">
+				code,data.*
+			</param>
+		</result>
+		<result name="none" type="json">
+			<param name="includeProperties">
+	        	code
+        	</param>
+		</result>
+	</action>
+	
+	<action name="getParticipantList" class="com.campuspo.action.GetPostersAction"  method="getParticipantList">
+		<result name="success" type="json">
+			<param name="includeProperties">
+				code,data.*
+			</param>
+		</result>
+		<result name="none" type="json">
+			<param name="includeProperties">
+	        	code
+        	</param>
+		</result>
+	</action>
+	
+	<action name="join" class="com.campuspo.action.GetPostersAction"  method="participant">
+		<result name="success" type="json">
+			<param name="includeProperties">
+				code,data.*
+			</param>
+		</result>
+		<result name="none" type="json">
+	        <param name="includeProperties">
+	        	code
+        	</param>
+        </result>
+	</action>
+	
+	<action name="releasePoster" class="com.campuspo.action.GetPostersAction"  method="releasePoster">
+		<result name="success" type="json">
+			<param name="includeProperties">
+				code,data.*
+			</param>
+		</result>
+		<result name="none" type="json">
+	        <param name="includeProperties">
+	        	code
+        	</param>
+        </result>
+	</action>
+	
+	
+	<action name="addFavour" class="com.campuspo.action.GetPostersAction"  method="addFavour">
+		<result name="success" type="json">
+			<param name="includeProperties">
+				code,data.*
+			</param>
+		</result>
+		<result name="none" type="json">
+	        <param name="includeProperties">
+	        	code
+        	</param>
+        </result>
+	</action>
+	
+	<action name="quit" class="com.campuspo.action.GetPostersAction"  method="quitJoin">
+		<result name="success" type="json">
+			<param name="includeProperties">
+				code,data.*
+			</param>
+		</result>
+		<result name="none" type="json">
+	        <param name="includeProperties">
+	        	code
+        	</param>
+        </result>
+	</action>
+</package>  
+</struts>    
